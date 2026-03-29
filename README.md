@@ -7,11 +7,14 @@ CODE:
 
 
 
+
 import random
 
 def secret(t):
+    # This line is now inside the function
     print("----Welcome to guess number challenge----")
     
+    # The loop is now indented, so it belongs to the function
     while True:
         try:
             guess = int(input("Guess the number between 1 and 100: "))
@@ -26,5 +29,6 @@ def secret(t):
         except ValueError:
             print("Please enter a valid number!")
 
+# These are separate lines at the very bottom (no indentation)
 y = random.randint(1, 100)
 secret(y)
